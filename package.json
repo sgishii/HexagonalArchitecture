@@ -1,24 +1,30 @@
 {
   "name": "ddd_sample",
   "version": "0.1.0",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "bin": {
+    "ddd_sample": "bin/ddd_sample.js"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest"
+    "test": "jest",
+    "cdk": "cdk"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.102",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
-    "aws-cdk-lib": "2.22.0",
-    "constructs": "^10.0.0",
+    "aws-cdk": "2.22.0",
+    "esbuild": "^0.15.6",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
   },
-  "peerDependencies": {
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.163.0",
     "aws-cdk-lib": "2.22.0",
-    "constructs": "^10.0.0"
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
   }
 }
